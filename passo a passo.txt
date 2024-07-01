@@ -60,9 +60,40 @@ criar arquivo .eslintrc.json e colocar o codigo abaixo no arquivo
   }
 }
 
+-----------------AJUSTAR IMPORTAÇÃO DAS PASTAS----------------------------
+ir no arquivo tsconfig.json e descomentar a opção "baseUrl": "./" e a opção "paths": {"@/*": ["./src/*"]}
 
+-----------------BANCO DE DADOS--------------------------
+instalar a extensão do prisma no vscode
+apertar f1 e digitar json, incluir o codigo abaixo
+"[prisma]":{
+        "editor.formatOnSave": true
+    },
 
+instalar as bibliotecas - npm i prisma -D // rodar o comando -> npx prisma init, para iniciar a parte de banco de dados
+sera criada uma pasta prisma e um arquivo schema.prisma, nela sera configurado as models(tabelas)
 
+npm install @prisma/client para continuar o procedimento abaixo
+
+executar o comando -> npx prisma generate // ele vai criar de forma automatica a tipagem do schema
+
+para testar o codigo ate esse ponto, no arquivo app.ts é possivel realizar o teste abaixo:
+
+*
+import fastify from "fastify";
+import { PrismaClient } from "@prisma/client";
+
+export const app = fastify();
+
+const prisma = new PrismaClient();
+
+prisma.user.create({
+  data: {
+    name: "Gustavo Lima",
+    email: "gu.lim@hotmail.com",
+  },
+});
+*
 
 
 
