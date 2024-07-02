@@ -95,7 +95,27 @@ prisma.user.create({
 });
 *
 
+---------------INICIANDO COM O DOCKER--------------
+com o docker instalado vamos rodar o comando para criar o banco de dados
+docker run --name NodeJSmodulo3RocketSeat-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=rocketseatModulo3 -p 5432:5432 bitnami/postgresql
 
+comando para criar um container no trabalho utilizando outra porta
+docker run --name NodeJSmodulo3RocketSeat-pg -e POSTGRESQL_USERNAME=docker -e POSTGRESQL_PASSWORD=docker -e POSTGRESQL_DATABASE=rocketseatModulo3 -p 5433:5432 bitnami/postgresql
+
+alterar usuario e senha no arquivo .ENV
+
+npx prisma migrate dev // comando que vai no arquivo schema.prisma e verifica qual tabela não existe no banco de dados e cria
+descrever oque foi feito ao rodar o comando acima
+
+ao rodar o comando acima a pasta migrations e arquivos deveram ser criados
+
+npx prisma studio - vai abrir o banco de dados no navegador
+
+docker ps - comando para ver os containers que estão rodando
+docket ps -a - comando para ver os containers que eu ja rodei
+ctrl + C - comando para parar o docker // docker stop + id ou nome
+docker start nome do banco - comando para iniciar o container
+docker rm nome do banco - comando para deletar o container
 
 
 
