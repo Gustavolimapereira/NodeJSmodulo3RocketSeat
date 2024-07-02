@@ -117,6 +117,13 @@ ctrl + C - comando para parar o docker // docker stop + id ou nome
 docker start nome do banco - comando para iniciar o container
 docker rm nome do banco - comando para deletar o container
 
+--docker compose
+é um metodo para manter o banco de dados atualizado entre os desenvolvedores
+
+criar arquivo docker-compose.yml configurar o arquivo 
+e rodar o comando - docker compose up -d // executar o cmd como admin
+docker compose stop - comando para parar o container
+docker compose up -d - caso o container ja tenha sido criado ao rodar esse comando novamente ele vai só iniciar o container após o stop
 
 
 
