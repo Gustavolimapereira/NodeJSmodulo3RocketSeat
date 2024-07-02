@@ -148,6 +148,9 @@ app.post("/users", async (request, reply) => {
   return reply.status(201).send();
 });
 
+-----------------------HASH E VALIDAÇÃO-----------------------
+instalar nova biblioteca 
+npm i bcryptjs // npm i -D @types/bcryptjs
 
 
 
