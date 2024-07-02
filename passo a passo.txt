@@ -125,6 +125,29 @@ e rodar o comando - docker compose up -d // executar o cmd como admin
 docker compose stop - comando para parar o container
 docker compose up -d - caso o container ja tenha sido criado ao rodar esse comando novamente ele vai só iniciar o container após o stop
 
+---------------------EXEMPLO DE ROTA PARA INSERÇÃO DE DADOS NO BD----------------
+rota inserido no app.ts
+
+app.post("/users", async (request, reply) => {
+  const registerBodySchema = z.object({
+    name: z.string(),
+    email: z.string().email(),
+    password: z.string().min(6),
+  });
+
+  const { name, email, password } = registerBodySchema.parse(request.body);
+
+  await prisma.user.create({
+    data: {
+      name,
+      email,
+      password_hash: password,
+    },
+  });
+
+  return reply.status(201).send();
+});
+
 
 
 
