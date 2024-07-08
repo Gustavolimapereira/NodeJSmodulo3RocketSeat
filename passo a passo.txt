@@ -153,4 +153,12 @@ instalar nova biblioteca
 npm i bcryptjs // npm i -D @types/bcryptjs
 
 
+-----------------------TESTES-----------------------
+instalar a biblioteca do vitest
 
+npm i vitest vite-tsconfig-paths -D
+criar aquivo na raiz do projeto - vite.config.ts configura-lo
+
+criar script no package.json
+"test": "vitest run",
+"test:watch": "vitest"
