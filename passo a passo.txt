@@ -161,4 +161,5 @@ criar aquivo na raiz do projeto - vite.config.ts configura-lo
 
 criar script no package.json
 "test": "vitest run",
-"test:watch": "vitest"
+"test:watch": "vitest",
+"test:coverage": "vitest run --coverage"
