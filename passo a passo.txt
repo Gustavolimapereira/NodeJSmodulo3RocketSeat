@@ -121,7 +121,7 @@ docker rm nome do banco - comando para deletar o container
 é um metodo para manter o banco de dados atualizado entre os desenvolvedores
 
 criar arquivo docker-compose.yml configurar o arquivo 
-e rodar o comando - docker compose up -d // executar o cmd como admin
+** e rodar o comando - docker compose up -d // executar o cmd como admin npx prisma migrate dev // npx prisma generate // docker compose up -d
 docker compose stop - comando para parar o container
 docker compose up -d - caso o container ja tenha sido criado ao rodar esse comando novamente ele vai só iniciar o container após o stop
 
