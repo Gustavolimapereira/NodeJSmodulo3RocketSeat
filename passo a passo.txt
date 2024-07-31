@@ -166,3 +166,14 @@ criar script no package.json
 
 -------------------JWT----------------------
 npm i @fastify/jwt
+
+
+-----------------ENVIRONMENT BD------------------
+criar a pasta vitest-environment-prisma
+acessar a pasta e rodar o comando npm init -y
+acessar o package.json apagar os scripts e renomear o main
+para o nome do arquivo que vai ser criado entro dessa pasta.  
+rodar o comando npm link dentro dessa pasta
+voltar a raiz do projeto e rodar o comando npm link + o nome da pasta criada
+
+

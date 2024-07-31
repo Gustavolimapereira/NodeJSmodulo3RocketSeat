@@ -3646,6 +3646,10 @@ vite@*, vite@^5.0.0:
   optionalDependencies:
     fsevents "~2.3.3"
 
+"vitest-environment-prisma@file:prisma/vitest-environment-prisma":
+  version "1.0.0"
+  resolved "file:prisma/vitest-environment-prisma"
+
 vitest@2.0.1:
   version "2.0.1"
   resolved "https://registry.npmjs.org/vitest/-/vitest-2.0.1.tgz"
