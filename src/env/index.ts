@@ -4,6 +4,7 @@ import { z } from "zod"; // faz a validação das variaveis
 const envSchema = z.object({
   // objeto que faz as validações
   NODE_ENV: z.enum(["dev", "test", "production"]).default("dev"), // enum vai ser alguma entre varias opções
+  JWT_SECRET: z.string(),
   PORT: z.coerce.number().default(3333), // coerce pega o dado independente do formato e muda para o formato seguinte
 });
 
