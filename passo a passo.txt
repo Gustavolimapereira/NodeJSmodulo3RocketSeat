@@ -163,3 +163,6 @@ criar script no package.json
 "test": "vitest run",
 "test:watch": "vitest",
 "test:coverage": "vitest run --coverage"
+
+-------------------JWT----------------------
+npm i @fastify/jwt
