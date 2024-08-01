@@ -179,4 +179,7 @@ voltar a raiz do projeto e rodar o comando npm link + o nome da pasta criada
 instalar o pacote // npm install -D npm-run-all
 ajustar o package.json
 
+instalar a biblioteca npm i supertest -D para criar os testes e2e
+npm i @types/supertest -D
+
 

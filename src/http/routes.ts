@@ -6,7 +6,7 @@ import { verifyJWT } from "./middlewares/verify-jwt";
 
 export async function appRoutes(app: FastifyInstance) {
   app.post("/users", register);
-  app.post("/session", authenticate);
+  app.post("/sessions", authenticate);
 
   /* Rotas que só podem ser chamadas se o usuario estiver autenticado */
   app.get("/me", { onRequest: [verifyJWT] }, profile);
