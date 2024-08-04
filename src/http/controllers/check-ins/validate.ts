@@ -2,7 +2,7 @@ import { FastifyRequest, FastifyReply } from "fastify";
 import { z } from "zod";
 import { makeValidateCheckinUseCase } from "@/use-cases/factories/make-validade-check-in-use-case";
 
-export async function validade(request: FastifyRequest, reply: FastifyReply) {
+export async function validate(request: FastifyRequest, reply: FastifyReply) {
   const validateCheckInParamsSchema = z.object({
     checkInId: z.string().uuid(),
   });
