@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from "fastify";
 import { z } from "zod";
-import { makeValidadeCheckinUseCase } from "@/use-cases/factories/make-validade-check-in-use-case";
+import { makeValidateCheckinUseCase } from "@/use-cases/factories/make-validade-check-in-use-case";
 
 export async function validade(request: FastifyRequest, reply: FastifyReply) {
   const validateCheckInParamsSchema = z.object({
@@ -9,7 +9,7 @@ export async function validade(request: FastifyRequest, reply: FastifyReply) {
 
   const { checkInId } = validateCheckInParamsSchema.parse(request.params);
 
-  const validateCheckInUseCase = makeValidadeCheckinUseCase();
+  const validateCheckInUseCase = makeValidateCheckinUseCase();
 
   await validateCheckInUseCase.execute({
     checkInId,
