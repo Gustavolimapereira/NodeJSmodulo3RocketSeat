@@ -183,3 +183,7 @@ instalar a biblioteca npm i supertest -D para criar os testes e2e
 npm i @types/supertest -D
 
 
+----------------RefreshToken----------------
+instalar o npm i @fastify/cookie
+
+
