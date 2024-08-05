@@ -187,3 +187,7 @@ npm i @types/supertest -D
 instalar o npm i @fastify/cookie
 
 
+-------------- CI / CD---------------
+criar pasta .github criar outra pasta dentro chamada workflows e criar um arquivi para cada workflow
+
+
